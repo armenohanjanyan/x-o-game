@@ -1,5 +1,5 @@
 import { Layout, Button, Alert } from 'antd';
-import './GameLayout.css'
+import './GameLayout.scss'
 import {Board} from "../Board/Board";
 import React, { useEffect, useState } from "react";
 import GameService from "../../GameService";
@@ -66,7 +66,6 @@ export const GameLayout = () => {
                 GameService.getScore()
                     .then(({data}) => setScore(data.result))
             })
-            .catch(error => console.log(error))
     }
 
     return (
